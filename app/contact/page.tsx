@@ -17,8 +17,9 @@ export default function Contact() {
       <section className="section">
         <h2>Get In Touch</h2>
         <p>
-          [Placeholder — a line or two on what kind of messages you want: tips, corrections,
-          guest post pitches, etc. Let people know you&apos;ll get back to them.]
+          Whether it&apos;s a tip on a story, a correction on something I got wrong, or you just
+          want to argue about who should be starting — I want to hear it. Drop a message below
+          and I&apos;ll get back to you as soon as I can.
         </p>
 
         <form className="form" action={FORM_ACTION} method="POST">
