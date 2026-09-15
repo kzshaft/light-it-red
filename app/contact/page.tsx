@@ -9,9 +9,11 @@ const FORM_ACTION = "https://formspree.io/f/mnpnavgk";
 export default function Contact() {
   return (
     <>
-      <section className="hero" style={{ padding: "64px 24px" }}>
-        <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>Contact Me</h1>
-        <p>Got a take, a correction, or just want to talk Wolfpack sports?</p>
+      <section className="page-header">
+        <div className="page-header-inner">
+          <h1>Contact Me</h1>
+          <p>Got a take, a correction, or just want to talk Wolfpack sports?</p>
+        </div>
       </section>
 
       <section className="section">

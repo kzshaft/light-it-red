@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Big_Shoulders } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const bigShoulders = Big_Shoulders({
+  variable: "--font-display",
+  weight: ["700", "800", "900"],
   subsets: ["latin"],
 });
 
@@ -15,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={geistSans.variable}>
+    <html lang="en" className={`${geistSans.variable} ${bigShoulders.variable}`}>
       <body>
         <header className="site-header">
           <nav className="site-nav">

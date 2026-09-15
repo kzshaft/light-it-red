@@ -4,11 +4,13 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <h1>Light It Red</h1>
-        <p>Shedding light on NC State sports — news, takes, and Wolfpack pride.</p>
-        <Link href="/contact" className="btn">
-          Contact Me
-        </Link>
+        <div className="hero-inner">
+          <h1>Light It Red</h1>
+          <p>Shedding light on NC State sports — news, takes, and Wolfpack pride.</p>
+          <Link href="/contact" className="btn">
+            Contact Me
+          </Link>
+        </div>
       </section>
 
       <section className="section">
@@ -20,24 +22,37 @@ export default function Home() {
         </p>
 
         <div className="card-grid">
-          <div className="card">
+          <div className="card" style={{ "--card-accent": "var(--brick)" } as React.CSSProperties}>
+            <span className="tag">Football</span>
             <h3>Game Recaps</h3>
             <p>What happened, what it means, and what&apos;s next — after every game.</p>
           </div>
-          <div className="card">
+          <div className="card" style={{ "--card-accent": "var(--ink)" } as React.CSSProperties}>
+            <span className="tag">Basketball</span>
             <h3>Season Previews</h3>
             <p>
               Where the Pack stands heading into football and basketball season, position by
               position.
             </p>
           </div>
-          <div className="card">
+          <div
+            className="card"
+            style={{ "--card-accent": "var(--brick-deep)" } as React.CSSProperties}
+          >
+            <span className="tag">Culture</span>
             <h3>Wolfpack Culture</h3>
             <p>
               Tailgate traditions, gameday tips, and everything that makes being a Pack fan worth
               it.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="author-strip">
+        <div className="author-strip-inner">
+          <p>Written by Chris J — lifelong Wolfpack fan.</p>
+          <Link href="/about">More about this site</Link>
         </div>
       </section>
     </>

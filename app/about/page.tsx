@@ -7,9 +7,11 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <section className="hero" style={{ padding: "64px 24px" }}>
-        <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>About Me</h1>
-        <p>Chris J &middot; Lifelong Wolfpack fan</p>
+      <section className="page-header">
+        <div className="page-header-inner">
+          <h1>About Me</h1>
+          <p>Chris J — lifelong Wolfpack fan</p>
+        </div>
       </section>
 
       <section className="section">
