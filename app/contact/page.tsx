@@ -4,8 +4,7 @@ export const metadata: Metadata = {
   title: "Contact | Light It Red",
 };
 
-// Swap in your own Formspree endpoint (or another form backend) — see README.md.
-const FORM_ACTION = "https://formspree.io/f/YOUR_FORM_ID";
+const FORM_ACTION = "https://formspree.io/f/mnpnavgk";
 
 export default function Contact() {
   return (
@@ -39,11 +38,6 @@ export default function Contact() {
             Send Message
           </button>
         </form>
-
-        <p className="placeholder-note">
-          This form won&apos;t deliver mail until you plug in a real endpoint — see README.md for
-          a 2-minute Formspree setup.
-        </p>
       </section>
     </>
   );
