@@ -77,7 +77,11 @@ a {
 /* Hero */
 
 .hero {
-  background: linear-gradient(150deg, var(--black), var(--red-dark));
+  background:
+    linear-gradient(150deg, rgba(17, 17, 17, 0.82), rgba(143, 0, 0, 0.68)),
+    url("/hero-belltower.jpg");
+  background-size: cover;
+  background-position: center;
   color: var(--white);
   padding: 96px 24px;
   text-align: center;
