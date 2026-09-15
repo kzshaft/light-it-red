@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
+import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | Light It Red",
 };
-
-const FORM_ACTION = "https://formspree.io/f/mnpnavgk";
 
 export default function Contact() {
   return (
@@ -24,23 +23,7 @@ export default function Contact() {
           and I&apos;ll get back to you as soon as I can.
         </p>
 
-        <form className="form" action={FORM_ACTION} method="POST">
-          <div className="field">
-            <label htmlFor="name">Name</label>
-            <input id="name" name="name" type="text" required />
-          </div>
-          <div className="field">
-            <label htmlFor="email">Email</label>
-            <input id="email" name="email" type="email" required />
-          </div>
-          <div className="field">
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" required />
-          </div>
-          <button type="submit" className="btn" style={{ alignSelf: "flex-start" }}>
-            Send Message
-          </button>
-        </form>
+        <ContactForm />
       </section>
     </>
   );

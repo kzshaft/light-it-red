@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { getAllPosts, formatDate } from "@/lib/posts";
 
 export default function Home() {
+  const posts = getAllPosts().slice(0, 3);
+
   return (
     <>
       <section className="hero">
@@ -13,7 +16,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      {posts.length > 0 && (
+        <section className="section">
+          <h2>Latest Posts</h2>
+          <ul className="post-list">
+            {posts.map((post) => (
+              <li key={post.slug} className="post-item">
+                <Link href={`/posts/${post.slug}`} className="post-item-link">
+                  <span className="tag">{post.category}</span>
+                  <h3>{post.title}</h3>
+                  <p className="post-item-date">{formatDate(post.date)}</p>
+                  <p>{post.excerpt}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <Link href="/posts" className="btn btn-outline-brick" style={{ marginTop: "32px" }}>
+            All Posts
+          </Link>
+        </section>
+      )}
+
+      <section className="section section-dark">
         <h2>Go Pack!</h2>
         <p>
           Every fall, and winter, and spring, this is where the Wolfpack opinions go — win or
@@ -22,20 +46,29 @@ export default function Home() {
         </p>
 
         <div className="card-grid">
-          <div className="card" style={{ "--card-accent": "var(--brick)" } as React.CSSProperties}>
+          <Link
+            href="/posts"
+            className="card"
+            style={{ "--card-accent": "var(--brick)" } as React.CSSProperties}
+          >
             <span className="tag">Football</span>
             <h3>Game Recaps</h3>
             <p>What happened, what it means, and what&apos;s next — after every game.</p>
-          </div>
-          <div className="card" style={{ "--card-accent": "var(--ink)" } as React.CSSProperties}>
+          </Link>
+          <Link
+            href="/posts"
+            className="card"
+            style={{ "--card-accent": "var(--ink)" } as React.CSSProperties}
+          >
             <span className="tag">Basketball</span>
             <h3>Season Previews</h3>
             <p>
               Where the Pack stands heading into football and basketball season, position by
               position.
             </p>
-          </div>
-          <div
+          </Link>
+          <Link
+            href="/posts"
             className="card"
             style={{ "--card-accent": "var(--brick-deep)" } as React.CSSProperties}
           >
@@ -45,7 +78,7 @@ export default function Home() {
               Tailgate traditions, gameday tips, and everything that makes being a Pack fan worth
               it.
             </p>
-          </div>
+          </Link>
         </div>
       </section>
 
