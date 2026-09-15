@@ -14,30 +14,31 @@ export default function Home() {
       <section className="section">
         <h2>Go Pack!</h2>
         <p>
-          [Placeholder — replace with your own intro. A couple sentences on what this site covers:
-          game recaps, recruiting buzz, tailgate traditions, whatever your angle is. Say why
-          people should keep coming back.]
+          Every fall, and winter, and spring, this is where the Wolfpack opinions go — win or
+          lose. No hot-take mill, no manufactured outrage, just one fan&apos;s honest read on how
+          the Pack is playing and what&apos;s coming next.
         </p>
 
         <div className="card-grid">
           <div className="card">
-            <h3>[Topic One]</h3>
-            <p>[Placeholder — e.g. Football recaps and analysis after every game.]</p>
+            <h3>Game Recaps</h3>
+            <p>What happened, what it means, and what&apos;s next — after every game.</p>
           </div>
           <div className="card">
-            <h3>[Topic Two]</h3>
-            <p>[Placeholder — e.g. Basketball season previews and player spotlights.]</p>
+            <h3>Season Previews</h3>
+            <p>
+              Where the Pack stands heading into football and basketball season, position by
+              position.
+            </p>
           </div>
           <div className="card">
-            <h3>[Topic Three]</h3>
-            <p>[Placeholder — e.g. Where to watch, tailgate tips, gameday traditions.]</p>
+            <h3>Wolfpack Culture</h3>
+            <p>
+              Tailgate traditions, gameday tips, and everything that makes being a Pack fan worth
+              it.
+            </p>
           </div>
         </div>
-
-        <p className="placeholder-note">
-          This is draft copy for lightitred.com. Swap in real text, then let me know if you want a
-          real photo of the Belltower (or anything else) swapped in for the hero background.
-        </p>
       </section>
     </>
   );
